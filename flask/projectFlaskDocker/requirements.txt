@@ -1,0 +1,16 @@
+Flask
+Flask-Bootstrap
+Flask-Migrate
+Flask-Moment
+Flask-SQLAlchemy
+Flask-Script
+Flask-WTF
+Jinja2
+Mako
+SQLAlchemy
+WTForms
+Werkzeug
+itsdangerous
+supervisor
+flask.ext
+redis
