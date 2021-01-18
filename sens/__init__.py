@@ -16,8 +16,10 @@ def create_app():
         # Import parts of our application
         import sens.home.routes
         import sens.cadastro.routes
+        import sens.errorhandlers.erros
 
         app.register_blueprint(sens.home.routes.home_bp)
         app.register_blueprint(sens.cadastro.routes.cadastro_bp)
+        app.register_blueprint(sens.errorhandlers.erros.errors_bp)
 
         return app
