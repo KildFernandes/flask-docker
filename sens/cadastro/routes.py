@@ -20,7 +20,6 @@ def cadastro():
     form = CadastroForm()
     
     if request.method == 'POST':
-        logging.warning( str(request) ) 
         name = request.form.get('name')
         email = request.form.get('email')
         doc = mongo.db.Usuario.insert({'name':name, 'email':email})
