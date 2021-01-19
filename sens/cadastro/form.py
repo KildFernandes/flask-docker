@@ -19,7 +19,7 @@ class CadastroForm(FlaskForm):
         [
             DataRequired(),
             Length(min=4,
-            message=('Your message is too short.'))
+            message=('Message é muito curta.'))
         ]
     )
     submit = SubmitField('Submit')
