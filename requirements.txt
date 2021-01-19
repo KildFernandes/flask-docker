@@ -3,6 +3,8 @@ Flask-Bootstrap
 Flask-Migrate
 Flask-Moment
 Flask-SQLAlchemy
+Flask-PyMongo
+flask-mongoengine
 Flask-Script
 Flask-WTF
 Jinja2
