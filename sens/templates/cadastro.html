@@ -1,31 +1,47 @@
-{% extends "bootstrap/base.html" %}
-{% block title %}Flasky{% endblock %}
-{% block navbar %}
-<div class="navbar navbar-inverse" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle"
-            data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Flasky</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-{% endblock %}
+{% extends 'layout.html' %}
 {% block content %}
-<div class="container">
-    <div class="page-header">
-        <h1>Cadastro!</h1>
-    </div>
-</div>
+<div class="formwrapper">
+    <h2 class="title">Contact</h2>
+    <form method="POST" action="/cadastro">
+
+      <fieldset class="form-field">
+      {{ form.name.label }}
+      {{ form.name }}
+        {% if form.name.errors %}
+        <ul class="errors">
+          {% for error in form.name.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="form-field">
+        {{ form.email.label }}
+        {{ form.email }}
+        {% if form.email.errors %}
+          <ul class="errors">
+            {% for error in form.email.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="form-field">
+        {{ form.body.label }}
+        {{ form.body }}
+        {% if form.body.errors %}
+          <ul class="errors">
+            {% for error in form.body.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      {{ form.submit }}
+
+      </form>
+  </div>
 {% endblock %}
